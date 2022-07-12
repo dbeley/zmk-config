@@ -10,8 +10,8 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+   flavor = "tap-preferred";
+   tapping_term_ms = <100>;
 };
 
 / {
@@ -54,8 +54,6 @@
             bindings = <&kp RGUI>;
         };
 
-
-
     };
 
         keymap {
@@ -65,42 +63,36 @@
 		bindings = <
 		&mt LGUI Q &kp W   &kp   E &kp   R   &kp T             &kp Y   &kp U   &kp I     &kp O    &mt LGUI P
 		&kp A      &kp S   &kp   D &kp   F   &kp G             &kp H   &kp J   &kp K     &kp L    &kp RET
-		&mt LSFT Z &kp X   &kp   C &kp   V   &kp B             &kp N   &kp M   &kp CMMA  &kp DOT  &mt LSFT QUOT
+		&mt LSFT Z &kp X   &kp   C &kp   V   &kp B             &kp N   &kp M   &kp CMMA  &kp DOT  &mt LSFT SLASH
           	                          &mo 1 &mt LCTL SPC    &mt LCTL SPC &mo 2
 		>;
 		};
 
        	left_layer {
 		bindings = <
-		&kp NUM_1     &kp NUM_2    &kp NUM_3      &kp NUM_4     &kp NUM_5           &trans &trans &trans &trans &trans
-		&mt LGUI TAB  &mt LALT DQT &mt LSFT PIPE2 &mt LCTL HASH &mt RALT DEL        &trans &trans &trans &trans &trans
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	    &trans &trans &trans &trans &trans
-		// &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		        &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
-		// &kp TAB    &mt LGUI DQT &mt LALT PIPE2 &mt LSFT HASH &kp RET             &kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL
-		// &kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL
-					    &mo 1  &trans    	               		           &trans   &mo 2
+		&kp NUM_1    &kp NUM_2    &kp NUM_3       &kp NUM_4       &kp NUM_5         &trans &trans &trans &trans &trans
+		&mt LGUI TAB &mt LALT SQT &mt LSFT BSLH   &mt LCTL SEMI   &mt RALT DEL      &trans &trans &trans &trans &trans
+		&kp ESC      &kp GRAVE 	  &kp NON_US_BSLH &kp MINUS       &kp EQUAL         &trans &trans &trans &trans &trans
+			                                                     &mo 1  &kp ESC    &kp ESC   &mo 2
 		>;
 		};
 
 
 		right_layer {
 		bindings = <
-		&trans &trans &trans &trans &trans         &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
-		&trans &trans &trans &trans &trans         &mt RALT DEL &mt LCTL KP_EQUAL &mt LSFT LBRC &mt LALT RBRC &mt LGUI BKSP
-		&trans &trans &trans &trans &trans         &kp UNDER &kp LEFT &kp DOWN &kp UP &kp RIGHT
-		// &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
-		// &kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		// &kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &trans                              &trans   &mo 2
+		&trans &trans &trans &trans &trans         &kp NUM_6    &kp NUM_7      &kp NUM_8     &kp NUM_9     &kp NUM_0
+		&trans &trans &trans &trans &trans         &mt RALT DEL &mt LCTL LBKT  &mt LSFT RBKT &mt LALT SQT  &mt LGUI BKSP
+		&trans &trans &trans &trans &trans         &kp MINUS    &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT
+					                               &mo 3 &trans    &trans   &mo 2
 		>;
 		};
 
 		tri_layer {
 		bindings = <
-		&kp NUM_1   &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5	    &trans &trans     &trans        &trans     &trans
+		&kp NUM_1   &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5	    &kp NUM_6 &kp NUM_7 &kp NUM_8   &kp NUM_9  &kp NUM_0
 		&kp F1      &kp F2       &kp F3       &kp F4       &kp F5           &trans &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE &trans
 		&bt BT_CLR  &bt BT_NXT   &bt BT_PRV   &kp F6       &kp F7           &trans &kp PG_DN  &kp K_VOL_DN  &trans     &trans
-					 &trans &trans                                 &trans &trans
+					                                     &trans &trans    &trans &trans
 		>;
 		};
 
